@@ -1,7 +1,7 @@
 import React from "react";
 import { BottomTabNavigationOptions } from "@react-navigation/bottom-tabs";
 
-import { DummyScreen, ListScreen } from "../screens";
+import { CreateScreen, ListScreen } from "../screens";
 import { ListIcon, CreateIcon } from "../ui/icons";
 
 interface Route {
@@ -27,7 +27,7 @@ export const useRoutes = (): Routes => {
     },
     {
       name: 'Create',
-      component: DummyScreen,
+      component: CreateScreen,
       options: { 
         ...commonOptions,
         tabBarIcon: ({ focused }) => <CreateIcon name={focused ? 'create' : 'create-outline'} size={24} />
