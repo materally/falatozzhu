@@ -5,9 +5,10 @@ import { EditIcon, TrashIcon } from '../ui/icons';
 
 interface CardProps {
   item: Item;
+  onRemove: (id: string) => void;
 }
 
-export const Card = ({ item: { name, description, quantity } }: CardProps) => {
+export const Card = ({ item: { id, name, description, quantity }, onRemove }: CardProps) => {
 
   return (
     <View style={styles.container}>
@@ -27,7 +28,7 @@ export const Card = ({ item: { name, description, quantity } }: CardProps) => {
 
         <Text>{ quantity } db</Text>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => onRemove(id)}>
           <TrashIcon size={20}/>
         </TouchableOpacity>
       </View>
