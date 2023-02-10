@@ -8,7 +8,7 @@ export const useDb = () => {
 
   const getItems = () => fetcher('/items').then(setItems);
 
-  const create = ({ name, description, quantity }: Item) => {
+  const create = ({ name, description, quantity }: Omit<Item, "id">) => {
     const newItem = {
       id: randomId(),
       name, 
@@ -24,6 +24,12 @@ export const useDb = () => {
       body: JSON.stringify(newItem)
     })
   }
+
+  const remove = (id: string) => {
+    return fetcher(`/items/${id}`, {
+      method: 'DELETE'
+    })
+  }
   
-  return { items, create, getItems };
+  return { items, create, getItems, remove };
 }
