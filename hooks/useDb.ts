@@ -30,6 +30,18 @@ export const useDb = () => {
       method: 'DELETE'
     })
   }
+
+  const update = ({ id, name, description, quantity }: Item) => {
+    const body = { name, description, quantity };
+
+    return fetcher(`/items/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+  }
   
-  return { items, create, getItems, remove };
+  return { items, create, getItems, remove, update };
 }
