@@ -23,7 +23,8 @@ export const useRoutes = (): Routes => {
       options: { 
         ...commonOptions,
         tabBarIcon: ({ focused }) => <ListIcon name={focused ? 'list' : 'list-outline'} size={24} />,
-        headerShown: false
+        headerShown: false,
+        title: 'Lista'
       }
     },
     {
@@ -31,7 +32,9 @@ export const useRoutes = (): Routes => {
       component: CreateScreen,
       options: { 
         ...commonOptions,
-        tabBarIcon: ({ focused }) => <CreateIcon name={focused ? 'create' : 'create-outline'} size={24} />
+        tabBarIcon: ({ focused }) => <CreateIcon name={focused ? 'create' : 'create-outline'} size={24} />,
+        headerTitle: 'Létrehozás',
+        title: 'Létrehozás'
       }
     }
   ]

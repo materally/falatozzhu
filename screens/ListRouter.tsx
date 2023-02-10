@@ -14,8 +14,8 @@ export const ListRouter = () => {
  
   return (
     <ListStack.Navigator>
-      <ListStack.Screen name="ListScreen" component={ListScreen} />
-      <ListStack.Screen name="Edit" component={EditScreen}  />
+      <ListStack.Screen name="ListScreen" component={ListScreen} options={{ headerTitle: 'Lista' }} />
+      <ListStack.Screen name="Edit" component={EditScreen} options={{ headerTitle: 'Szerkesztés' }} />
     </ListStack.Navigator>
   );  
 }
