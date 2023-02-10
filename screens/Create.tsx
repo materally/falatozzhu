@@ -38,6 +38,11 @@ export const CreateScreen = () => {
     }
 
     create({ name: String(name), description: String(description), quantity: Number(quantity) })
+
+    setName('');
+    setDescription('');
+    setQuantity('');
+    
     navigation.navigate('List' as never);
   }
 
