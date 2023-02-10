@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Húsimádó pizza",
+      "description": "paradicsomos alap, fűszeres hús, bacon, mozzarella sajt",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": "Döner",
+      "description": "pita, gyros hús csirkecombfiléből, jégsaláta",
+      "quantity": 12
+    },
+    {
+      "id": 3,
+      "name": "Hamburger",
+      "description": "buci, pulykahúspogácsa, kígyóuborka",
+      "quantity": 5
+    }
+  ]
+}
