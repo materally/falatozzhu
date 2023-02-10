@@ -1,8 +1,8 @@
 import React from "react";
 import { BottomTabNavigationOptions } from "@react-navigation/bottom-tabs";
-import Ionicons from "react-native-vector-icons/Ionicons";
 
-import { DummyScreen } from "../screens";
+import { DummyScreen, ListScreen } from "../screens";
+import { ListIcon, CreateIcon } from "../ui/icons";
 
 interface Route {
   name: string;
@@ -18,11 +18,11 @@ export const useRoutes = (): Routes => {
 
   return [
     {
-      name: 'Read',
-      component: DummyScreen,
+      name: 'List',
+      component: ListScreen,
       options: { 
         ...commonOptions,
-        tabBarIcon: ({ focused }) => <Ionicons name={focused ? 'list' : 'list-outline'} size={24} />
+        tabBarIcon: ({ focused }) => <ListIcon name={focused ? 'list' : 'list-outline'} size={24} />
       }
     },
     {
@@ -30,7 +30,7 @@ export const useRoutes = (): Routes => {
       component: DummyScreen,
       options: { 
         ...commonOptions,
-        tabBarIcon: ({ focused }) => <Ionicons name={focused ? 'create' : 'create-outline'} size={24} />
+        tabBarIcon: ({ focused }) => <CreateIcon name={focused ? 'create' : 'create-outline'} size={24} />
       }
     }
   ]
